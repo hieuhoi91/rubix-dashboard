@@ -6,7 +6,6 @@ import { ROUTES } from '@/constant';
 export function requireAuth(gssp: GetServerSideProps) {
   return async (ctx: GetServerSidePropsContext) => {
     const session = await getSession(ctx);
-    console.log('deooo vo dc', session);
 
     if (!session) {
       return {
