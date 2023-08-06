@@ -15,6 +15,7 @@ export interface Datum {
   status: string;
   total_price: number;
   orderItems: OrderItem[];
+  user: User;
 }
 
 export interface OrderItem {
@@ -44,4 +45,17 @@ export interface Item {
   stock: number;
   details: string;
   sku: string;
+}
+
+export interface User {
+  id: string;
+  created_at: string;
+  updated_at: string;
+  deleted_at: null;
+  username: string;
+  email: string;
+  phone: null;
+  avatar: null;
+  role: string;
+  cart_id: string;
 }

@@ -14,11 +14,11 @@ const Order: WithLayout = () => {
   const [orderItem, setOrderItem] = useState<Datum[]>([]);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState('Đang vận chuyển');
+  const [status, setStatus] = useState('In transit');
 
   const handleCompleteOrder = async (id: string) => {
     const _ = await CmsApi.completeOrder(id);
-    setStatus('Đã hoàn thành');
+    setStatus('Accomplished');
   };
 
   const handleListOrder = async () => {
@@ -49,27 +49,27 @@ const Order: WithLayout = () => {
               <div className='mb-4 flex w-full flex-col justify-between'>
                 <div className='flex flex-col gap-1'>
                   <div className='flex justify-between'>
-                    <h4 className='cursor-pointer transition-all hover:text-amber-400'>
-                      {product.id}
+                    <h4 className='cursor-pointer text-amber-400 transition-all '>
+                      {product.user.username}
                     </h4>
                     {product.status === 'pending' ? (
                       <Button
                         title={status}
                         onClick={() => handleCompleteOrder(product.id)}
                         className={`${
-                          status === 'Đã hoàn thành'
+                          status === 'Accomplished'
                             ? 'text-green-400 outline-none'
                             : 'border border-red-600 p-2 text-red-600'
                         }`}
                       />
                     ) : (
-                      <H4 className='text-green-400'>Đã hoàn thành</H4>
+                      <H4 className='text-green-400'>Accomplished</H4>
                     )}
                   </div>
                   <span className='font-bold'>
-                    Tổng giá tiền: {product.total_price}.000 đ
+                    Total price: ${product.total_price}.00
                   </span>
-                  <p>Tổng số lượng: {product.total_quantity}</p>
+                  <p>Total quantity: {product.total_quantity}</p>
                 </div>
               </div>
               <div className='flex flex-col gap-4'>
@@ -88,8 +88,8 @@ const Order: WithLayout = () => {
                     <div className='flex w-full flex-col'>
                       <H4>{item.item.name}</H4>
                       <div className='flex w-full justify-between'>
-                        <H4>Giá: {item.item.price}.000 đ</H4>
-                        <H4>Số lượng: {item.quantity}</H4>
+                        <H4>Price: ${item.item.price}.00</H4>
+                        <H4>Quantity: {item.quantity}</H4>
                       </div>
                     </div>
                   </div>

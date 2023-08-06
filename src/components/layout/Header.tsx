@@ -61,7 +61,7 @@ const Header = () => {
         }}
       >
         <button style={{ padding: '4px' }} onClick={() => signOut()}>
-          Đăng xuất
+          Log out
         </button>
       </Popover>
     </div>

@@ -39,13 +39,13 @@ const Analytics: FC = () => {
       analytics ? analytics.order_count : 0,
       analytics ? analytics.total_price : 0,
     ],
-    categories: ['Người dùng', 'Đơn hàng', 'Doanh thu'],
+    categories: ['Users', 'Order', 'Sales'],
   };
 
   const chartOptions: ApexOptions = {
     chart: { background: 'transparent' },
     colors: [theme.palette.primary.main, '#FF9777', '#FF6B93'],
-    labels: ['Người dùng', 'Đơn hàng', 'Doanh thu'],
+    labels: ['Users', 'Order', 'Sales'],
     plotOptions: {
       radialBar: {
         dataLabels: {
@@ -102,7 +102,7 @@ const Analytics: FC = () => {
       }}
     >
       <FlexBox alignItems='center' justifyContent='space-between'>
-        <H5>Thống kê</H5>
+        <H5>Analytics</H5>
         <AnalyticsPopover />
       </FlexBox>
 

@@ -148,8 +148,8 @@ const TotalSpent: FC = () => {
         [theme.breakpoints.down(425)]: { padding: '1.5rem' },
       }}
     >
-      <H5>Tổng doanh thu</H5>
-      <H2 color='primary.main'>{totalSpent?.total_price}.000 đ</H2>
+      <H5>Total sales revenue</H5>
+      <H2 color='primary.main'>${totalSpent?.total_price}.00</H2>
 
       <Box
         sx={{

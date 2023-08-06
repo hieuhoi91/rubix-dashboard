@@ -41,25 +41,25 @@ const Dashboard = () => {
     {
       price: count?.item_count,
       Icon: BucketIcon,
-      title: 'Tổng sản phẩm',
+      title: 'Products',
       color: theme.palette.primary.main,
     },
     {
       price: count?.order_count,
-      title: 'Tổng đơn hàng',
+      title: 'Orders',
       Icon: EarningIcon,
       color: theme.palette.primary.purple,
     },
     {
       price: count?.total_price,
       Icon: WindowsLogoIcon,
-      title: 'Tổng doanh thu',
+      title: 'Sales',
       color: theme.palette.primary.red,
     },
     {
       price: count?.user_count,
       Icon: PeopleIcon,
-      title: 'Tổng người dùng',
+      title: 'Users',
       color: theme.palette.primary.yellow,
     },
   ];

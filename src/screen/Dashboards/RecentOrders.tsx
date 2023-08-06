@@ -62,7 +62,7 @@ const RecentOrders: FC = () => {
 
   return (
     <Card sx={{ padding: '2rem' }}>
-      <H5 className='pb-2'>Người dùng hàng đầu</H5>
+      <H5 className='pb-2'>Recent Order</H5>
       <hr />
 
       <ScrollBar>
@@ -72,8 +72,8 @@ const RecentOrders: FC = () => {
           >
             <TableRow>
               <HeadTableCell>Top</HeadTableCell>
-              <HeadTableCell>Tên Người Dùng</HeadTableCell>
-              <HeadTableCell>Số điện thoại</HeadTableCell>
+              <HeadTableCell>Username</HeadTableCell>
+              <HeadTableCell>Total Amount</HeadTableCell>
               <HeadTableCell>Email</HeadTableCell>
               {/* <HeadTableCell>Total amount</HeadTableCell> */}
             </TableRow>
@@ -86,7 +86,7 @@ const RecentOrders: FC = () => {
                 <BodyTableCell>
                   <Small ml='1rem'>{item.username}</Small>
                 </BodyTableCell>
-                <BodyTableCell>{item.phone}</BodyTableCell>
+                <BodyTableCell>${item.total_spent}.00</BodyTableCell>
                 {/* <BodyTableCell>
                   <Box
                     sx={{
@@ -94,7 +94,7 @@ const RecentOrders: FC = () => {
                       borderRadius: 11,
                       maxWidth: 55,
                       padding: '0.3rem',
-                      textAlign: 'center',
+                      textAlign: 'center'
                       color: 'secondary.400',
                     }}
                   >
