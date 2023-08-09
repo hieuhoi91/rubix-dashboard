@@ -32,7 +32,7 @@ const Input: FC<IInput> = (props) => {
       />
       {eyeEnable ? (
         !isHidden ? (
-          <span className='text-2xl'>
+          <span className='flex items-center justify-center text-2xl'>
             <MdOutlineVisibility
               className='absolute right-2 text-gray-400 '
               onClick={HiddenPassword}

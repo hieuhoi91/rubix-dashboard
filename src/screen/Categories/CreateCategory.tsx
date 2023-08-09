@@ -1,4 +1,3 @@
-import { Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import { useFormik } from 'formik';
@@ -200,7 +199,7 @@ const CreateCategory: WithLayout = () => {
             ) : null}
           </div>
 
-          <div className='flex cursor-pointer items-center gap-2 text-xl text-light-text-primary'>
+          {/* <div className='flex cursor-pointer items-center gap-2 text-xl text-light-text-primary'>
             <span className='flex items-center justify-center'>
               <Stack direction='row' spacing={1} alignItems='center'>
                 <AntSwitch
@@ -211,7 +210,7 @@ const CreateCategory: WithLayout = () => {
               </Stack>
             </span>
             <span>Active</span>
-          </div>
+          </div> */}
 
           <div className='my-10 h-full'>
             <UploadImage multiple={false} images={images} setImage={setImage} />
